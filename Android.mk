@@ -7,7 +7,7 @@ vndk-test-sepolicy-sources-27 := $(wildcard $(LOCAL_PATH)/sepolicies/27/*.cil)
 vndk-test-sepolicy-targets-27 := $(patsubst %.cil,%-27-selinux-tested,$(vndk-test-sepolicy-sources-27))
 .PHONY: $(vndk-test-sepolicy-targets-26) $(vndk-test-sepolicy-targets-27)
 
-vndk-test-sepolicy: selinux_policy checkpolicy $(vndk-test-sepolicy-targets-26) $(vndk-test-sepolicy-targets-25)
+vndk-test-sepolicy: selinux_policy checkpolicy $(vndk-test-sepolicy-targets-26) $(vndk-test-sepolicy-targets-27)
 	echo "Successfully ran:"
 	echo 26: $(vndk-test-sepolicy-sources-26)
 	echo 26: $(vndk-test-sepolicy-targets-26)
