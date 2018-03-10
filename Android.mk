@@ -20,6 +20,6 @@ vndk-test-sepolicy: $(PRODUCT_OUT)/system/etc/selinux/plat_sepolicy.cil checkpol
 	rm -f $@
 
 %-27-selinux-tested: %.cil
-	./out/host/linux-x86/bin/secilc $(PRODUCT_OUT)/system/etc/selinux/plat_sepolicy.cil -o $@ -m -M true -G -N -c 30 $(PRODUCT_OUT)/system/etc/selinux/mapping/27.0.cil $<
+	./out/host/linux-x86/bin/secilc $(PRODUCT_OUT)/system/etc/selinux/plat_sepolicy.cil -o $@ -M true -G -N -c 30 $(PRODUCT_OUT)/system/etc/selinux/mapping/27.0.cil $<
 	./out/host/linux-x86/bin/checkpolicy -M -bC -o /dev/null $@
 	rm -f $@
